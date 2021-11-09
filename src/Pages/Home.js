@@ -6,7 +6,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+  useLocation
+} from "react-router-dom";
 
 const Grid = styled.div`
 
@@ -23,9 +30,10 @@ row-gap: 5vw;
 
 
 
-const OurCardButton = (name, image , subtext) =>{
+const OurCardButton = (name, image , link, subtext) =>{
 
   return(
+    <Link to = {link}>
     <Card >
         <CardActionArea>
           <CardMedia
@@ -44,6 +52,7 @@ const OurCardButton = (name, image , subtext) =>{
           </CardContent>
         </CardActionArea>
       </Card>
+      </Link>
   )
   
   }
@@ -57,15 +66,17 @@ export default function UseFormControl() {
       <Grid>
 
     <div>
-    {OurCardButton('Seus cursos','asdasd')}
+
+      
+    {OurCardButton('Seus cursos','asdasd',"/cursos_aluno")}
     </div>
 
     <div>
-    {OurCardButton('Avaliações pendentes','asdasd')}
+    {OurCardButton('Avaliações pendentes','asdasd','/avaliacoes_pendentes')}
     </div>
 
     <div>
-    {OurCardButton('Revisões','asdasd')}
+    {OurCardButton('Revisões','asdasd', "/revisoes_aluno")}
     </div>
 
 

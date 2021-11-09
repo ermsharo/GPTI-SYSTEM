@@ -1,26 +1,12 @@
 import * as React from 'react';
-import FormControl, { useFormControl } from '@mui/material/FormControl';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import Box from '@mui/material/Box';
-import FormHelperText from '@mui/material/FormHelperText';
 import styled from 'styled-components'
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Input from '@mui/material/Input';
-import FilledInput from '@mui/material/FilledInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import TextField from '@mui/material/TextField';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Typography from '@mui/material/Typography';
 import QuestaoDissertativa from '../Components/Prova/QuestãoDissertativa';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-import Paper from '@mui/material/Paper';
-import { StepIcon } from '@mui/material';
 import Headers from './../Components/Header/index';
 import QuestaoMultiplaEscolha from '../Components/Prova/QuestãoMultiplaEscolha';
 const ProvaBox = styled.div`

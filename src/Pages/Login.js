@@ -12,7 +12,14 @@ import FilledInput from '@mui/material/FilledInput';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+  useLocation
+} from "react-router-dom";
 
 
 
@@ -75,7 +82,7 @@ export default function UseFormControl() {
 
     <FormPading>
 
-        <Button variant="contained" fullWidth >Contained</Button>
+        <Link to="/home"><Button variant="contained" fullWidth >Contained</Button></Link>
         </FormPading>
         <ForgetPassword>Esqueceu a senha</ForgetPassword>
       </FormControl>

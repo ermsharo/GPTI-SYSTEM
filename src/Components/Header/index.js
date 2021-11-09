@@ -12,6 +12,14 @@ import styled from 'styled-components';
 import ChatDrawer from './../ChatDrawer/ChatDrawer';
 import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+  useLocation
+} from "react-router-dom";
 
 const HeaderBox = styled.div`
 
@@ -111,9 +119,11 @@ export default function Header() {
           </IconButton>
 
 </div>
-<LogoBox>
+
+<Link to="/home"><LogoBox>
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_EACH-USP.svg/2090px-Logo_EACH-USP.svg.png"/>
-</LogoBox>  
+</LogoBox> </Link>
+
 
     <UserBox>
     <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
