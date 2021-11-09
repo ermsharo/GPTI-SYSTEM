@@ -36,7 +36,7 @@ function App() {
         <Route path="prova" element={<Prova />} />      </Routes>
 
 
-  </StyledEngineProvider>,
+  </StyledEngineProvider>
 </BrowserRouter>
     </>
   );

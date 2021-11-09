@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import styled from 'styled-components';
 import ChatDrawer from './../ChatDrawer/ChatDrawer';
 import React, { useState } from 'react';
+import Typography from '@mui/material/Typography';
 
 const HeaderBox = styled.div`
 
@@ -22,12 +23,12 @@ margin:auto;
 
 const HeaderDisplay = styled.div`
 
-border: 2px solid red; 
-width: 100%;
+
+width: 70%;
 display:flex; 
 justify-content: space-around;
 padding-top: 10px;
-
+margin: auto;
 
 `
 
@@ -47,13 +48,14 @@ margin:auto;
 const UserBox = styled.div`
 
 display: flex;
-line-height: 40px;
+
 
 `
 
 const UserText = styled.div`
 padding-left:10px;
 padding-right: 10px;
+line-height: 80px;
 
 
 `
@@ -115,7 +117,9 @@ export default function Header() {
 
     <UserBox>
     <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-<UserText>usario@professor.com.br</UserText>
+<UserText>  <Typography gutterBottom variant="h6" component="div">
+  usario@professor.com.br
+          </Typography></UserText>
 
     </UserBox>
     </HeaderDisplay>
