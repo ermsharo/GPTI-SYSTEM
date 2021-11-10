@@ -43,8 +43,8 @@ const OurCardButton = (name, image , link, subtext) =>{
           <CardMedia
             component="img"
             height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
+            image={image}
+            alt="Seus cursos "
           />
           <CardContent>
    
@@ -76,15 +76,15 @@ export default function UseFormControl() {
     <div>
 
       
-    {OurCardButton('Seus cursos','asdasd',"/cursos_aluno")}
+    {OurCardButton('Seus cursos','https://www.somospar.com.br/wp-content/uploads/2015/02/destaque-5-dicas-para-otimizar-a-rotina-do-professor-fora-da-sala-de-aula.jpg',"/cursos_aluno")}
     </div>
 
     <div>
-    {OurCardButton('Avaliações pendentes','asdasd','/avaliacoes_pendentes')}
+    {OurCardButton('Avaliações pendentes','https://saxbr.com/wp-content/uploads/2019/03/278396-x-importantes-itens-para-avaliar-com-um-checklist-para-franquias-2.jpg','/avaliacoes_pendentes')}
     </div>
 
     <div>
-    {OurCardButton('Revisões','asdasd', "/revisoes_aluno")}
+    {OurCardButton('Revisões','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg', "/revisoes_aluno")}
     </div>
 
 

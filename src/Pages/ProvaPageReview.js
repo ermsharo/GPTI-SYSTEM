@@ -6,7 +6,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+  useLocation
+} from "react-router-dom";
 
 const Grid = styled.div`
 
@@ -31,45 +38,65 @@ padding-top: 64px;
 
 
 
-const OurCardButton = (name, image , subtext) =>{
+const OurCardButton = (name, image , link, subtext) =>{
 
 return(
-  <Card >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="160"
-          image={image}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-     {name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-    {subtext}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+(link) ?   <Link to = {link}>
+<Card >
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="160"
+        image={image}
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+   {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+  {subtext}
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  </Card>
+  </Link> : <Card >
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="160"
+        image={image}
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+   {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+  {subtext}
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  </Card>
+
 )
 
 }
 
 
 
-export default function UseFormControl() {
+export default function ProvaPageReview() {
   return (
       <>
       <Headers />
       <Grid>
 
-    <div>
+      <div  style = {{cursor:'none',
+opacity: 0.5}}>
     {OurCardButton('Nome da prova','https://sbradioterapia.com.br/wp-content/uploads/2017/11/prova-alternativa.jpg')}
     </div>
-
     <div>
-    {OurCardButton('Solicitar revisão','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEsQ38soW48W3z1RecoCAQgvLHOtmhX9w4PgQMHSee1aGaesoeVvIItftA8fYhSPzua_A&usqp=CAU')}
+    {OurCardButton('Solicitar revisão','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg','/prova_review')}
     </div>
 
 

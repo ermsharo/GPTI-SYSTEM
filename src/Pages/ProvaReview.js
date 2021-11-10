@@ -9,6 +9,8 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Headers from './../Components/Header/index';
 import QuestaoMultiplaEscolha from '../Components/Prova/QuestãoMultiplaEscolha';
+import QuestaoMultiplaEscolhaRevisada from '../Components/ProvaRevisada/QuestãoMultiplhaEscolhaRevisada';
+import QuestaoDissertativaRevisada from '../Components/ProvaRevisada/QuestãoDissertativaRevisada';
 const ProvaBox = styled.div`
 padding: 32px;
 width: 60vw;
@@ -80,17 +82,20 @@ const steps = [
 
 const Questions = [
 
-  <QuestaoMultiplaEscolha number = {1} index ={1}/>,
-  <QuestaoDissertativa number = {2} index ={1}/>,
-  <QuestaoDissertativa number = {3} index ={1}/>,
-  <QuestaoDissertativa number = {4} index ={1}/>,
-  <QuestaoMultiplaEscolha number = {1} index ={1}/>,
-  <QuestaoDissertativa number = {5} index ={1}/>,
-  <QuestaoDissertativa number = {6} index ={1}/>,
+  <QuestaoMultiplaEscolhaRevisada number = {1} index ={1}/>,
+  <QuestaoDissertativaRevisada number = {2} index ={1}/>,
+  <QuestaoDissertativaRevisada number = {3} index ={1}/>,
+  <QuestaoDissertativaRevisada number = {4} index ={1}/>,
+  <QuestaoDissertativaRevisada number = {5} index ={1}/>,
+  <QuestaoMultiplaEscolhaRevisada number = {1} index ={1} correct = {true}/>,
+  <QuestaoDissertativaRevisada number = {6} index ={1}/>,
+
+
 
 ]
+let CorrectAwnsers = [true, true, true, false, false, true]; 
 
-export default function UseFormControl() {
+export default function ProvaReview() {
 
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -106,6 +111,17 @@ export default function UseFormControl() {
     setActiveStep(0);
   };
 
+
+  let Icon = (index, status)=>{
+    return(
+       <Typography gutterBottom variant="h6" component="div" >
+{index}
+       </Typography>
+    )
+
+  }
+
+
   return (
     <>
           <Headers />
@@ -116,13 +132,12 @@ export default function UseFormControl() {
           <QuestionBox>
 
           <IndexBox>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper activeStep={activeStep}   orientation="vertical">
         {steps.map((step, index) => (
-          <Step key={step.label}>
-            <StepLabel
-            >
-              {step.label}
-            </StepLabel>
+          <Step key={step.label} >
+            <StepLabel > {step.label}</StepLabel> 
+
+    
             
           </Step>
         ))}

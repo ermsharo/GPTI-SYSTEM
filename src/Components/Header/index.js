@@ -32,7 +32,7 @@ margin:auto;
 const HeaderDisplay = styled.div`
 
 
-width: 70%;
+width: 100%;
 display:flex; 
 justify-content: space-around;
 padding-top: 10px;
@@ -56,6 +56,7 @@ margin:auto;
 const UserBox = styled.div`
 
 display: flex;
+padding-top: 12px;
 
 
 `
@@ -63,7 +64,8 @@ display: flex;
 const UserText = styled.div`
 padding-left:10px;
 padding-right: 10px;
-line-height: 80px;
+padding-top: 5px;
+
 
 
 `
@@ -90,8 +92,26 @@ export default function Header() {
       <AppBar position="static">
       <HeaderBox>
         <Toolbar>
+ 
           <HeaderDisplay>
+            
             <div>
+
+<IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            onClick ={ChatStatusChange}
+          >
+                <Link to="/home"><LogoBox>
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_EACH-USP.svg/2090px-Logo_EACH-USP.svg.png"/>
+</LogoBox> </Link>  
+          </IconButton>
+
+
+
           <IconButton
             size="large"
             edge="start"
@@ -120,9 +140,7 @@ export default function Header() {
 
 </div>
 
-<Link to="/home"><LogoBox>
-<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_EACH-USP.svg/2090px-Logo_EACH-USP.svg.png"/>
-</LogoBox> </Link>
+
 
 
     <UserBox>
