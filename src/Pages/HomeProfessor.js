@@ -80,7 +80,7 @@ export default function HomeProfessor() {
     </div>
 
     <div>
-    {OurCardButton('Perguntas','https://saxbr.com/wp-content/uploads/2019/03/278396-x-importantes-itens-para-avaliar-com-um-checklist-para-franquias-2.jpg','/avaliacoes_pendentes')}
+    {OurCardButton('Perguntas','https://saxbr.com/wp-content/uploads/2019/03/278396-x-importantes-itens-para-avaliar-com-um-checklist-para-franquias-2.jpg','/perguntas')}
     </div>
 
     <div>

@@ -60,38 +60,7 @@ const ButtonBoxBullet = styled.div`
 
 
 
-const OurCardButton = (name, image , link, subtext) =>{
 
-  return(
-    <Link to = {link}>
-   
-                    
-    <Card >
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image={image}
-            alt="Seus cursos "
-          />
-          <CardContent>
-   
-            <Typography gutterBottom variant="h5" component="div">
-
-       {name}
-            </Typography>
- 
-            <Typography variant="body2" color="text.secondary">
-      {subtext}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-   
-      </Link>
-  )
-  
-  }
 
   const currencies = [
     {

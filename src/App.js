@@ -21,7 +21,8 @@ import HomeRevisoes from './Pages/HomeRevisões';
 import HomeProfessor from './Pages/HomeProfessor';
 import TurmasProfessor from './Pages/TurmasProfessor';
 import CadastroTurma from './Pages/CadastroTurma';
-
+import PerguntasProfessor from './Pages/ProfessorPerguntas';
+import CadastroPerguntaProfessor from './Pages/ProfessorCadastraPergunta'; 
 function App() {
   return (
     <>
@@ -49,6 +50,9 @@ function App() {
         <Route path="/home_professor" element={<HomeProfessor />} />  
         <Route path="/turmas" element={<TurmasProfessor />} />  
         <Route path="/adicionar_turma" element={<CadastroTurma />} /> 
+        <Route path="/perguntas" element={<PerguntasProfessor />} />  
+        <Route path="/adicionar_pergunta" element={<CadastroPerguntaProfessor />} /> 
+        
         
            </Routes>
 
