@@ -72,32 +72,55 @@ if(status == 1){
 }
 if(status == 2){
   statusColor = "#F34235"
+  link = "/prova_expirada"
 }
 if(status == 3){
   statusColor = "#fe9700"
+   link = '/'
 }
 
 
 
   return(
-    <Link to = {link}>
-   <Paper elevation={1} style = {{padding: '16px'}}>
-   <ProvaButton style ={{color: statusColor}}>
-    <div>
-    <DescriptionIcon style ={{fontSize: '64px'}}/>
-    </div>
-    <div>
-    <Typography gutterBottom variant="h5" component="div">
-       {name}
-    </Typography>
-    </div>
-   </ProvaButton>
-   </Paper>
-      </Link>
-  )
+    (status != 3) ?
   
-  }
+      <>
+      <Link to = {link}>
+    <Paper elevation={1} style = {{padding: '16px'}}>
+    <ProvaButton style ={{color: statusColor}}>
+     <div>
+     <DescriptionIcon style ={{fontSize: '64px'}}/>
+     </div>
+     <div>
+     <Typography gutterBottom variant="h5" component="div">
+        {name}
+     </Typography>
+     </div>
+    </ProvaButton>
+    </Paper>
+       </Link>
+       
+       </>
+       : 
 
+       <Paper elevation={1} style = {{padding: '16px'}}>
+       <ProvaButton style ={{color: statusColor}}>
+        <div>
+        <DescriptionIcon style ={{fontSize: '64px'}}/>
+        </div>
+        <div>
+        <Typography gutterBottom variant="h5" component="div">
+           {name}
+        </Typography>
+        </div>
+       </ProvaButton>
+       </Paper>
+  
+  
+  
+  )
+
+}
 
 
 export default function UseFormControl() {

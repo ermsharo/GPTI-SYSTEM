@@ -85,32 +85,28 @@ Descrição /Informações úteis
         <Tr >
           <Th> <Typography gutterBottom variant="h5" component="div" align = "center">Revisão  </Typography></Th>
           <Th> <Typography gutterBottom variant="h5" component="div" align = "center" >Status  </Typography></Th>
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center" >Duração  </Typography></Th>
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center">Data limite para questionamento  </Typography></Th>
+          <Th> <Typography gutterBottom variant="h5" component="div" align = "center" >Data limite para questionamento  </Typography></Th>
           <Th> <Typography gutterBottom variant="h5" component="div" align = "center">Nota </Typography></Th>
         </Tr>
       </Thead>
       <Tbody>
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to = '/prova_home_new' > <DescriptionIcon/>   Avaliação 1  </Link>   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">em andamento  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 60 min  </Typography></Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/>   Avaliação 1 </Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center">A Revisar  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  DD/MM/AAAA </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
         </Tr>
 
         <Tr style = {{color :'#8AC249'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to = '/prova_home_review'> <DescriptionIcon/>   Avaliação 2  </Link>   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Submetida  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 60 min   </Typography></Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to = '/prova_review_professor'> <DescriptionIcon/>   Avaliação 2  </Link>   </Typography></Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Revisado </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center"> DD/MM/AAAA </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
         </Tr>
 
         <Tr style = {{color :'#f34235'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to ="/prova_expirada"> <DescriptionIcon/>   Avaliação 3  </Link>   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Não submetida  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 60 min   </Typography></Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  <DescriptionIcon/>   Avaliação 3   </Typography></Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Expirado </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center"> DD/MM/AAAA </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
         </Tr>
@@ -119,7 +115,6 @@ Descrição /Informações úteis
        
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  <DescriptionIcon/>   Avaliação 4   </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Revisando  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">DD/MM/AAAA  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  DD/MM/AAAA  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
        </Tr>

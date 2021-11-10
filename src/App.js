@@ -16,7 +16,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import ProvaReview from './Pages/ProvaReview';
 import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
-
+import ProvaPageExpirada from './Pages/ProvaPageExpirada';
+import HomeRevisoes from './Pages/HomeRevisões';
 
 function App() {
   return (
@@ -26,26 +27,20 @@ function App() {
     <StyledEngineProvider injectFirst>
 
 
-   {/*  <Home/> */}
-    {/*     <Login/> */}
-
-
-
-
-
-
 
     <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Login />} />
         <Route path="/prova_home_new" element={<ProvaPageNew />} />
         <Route path="/prova_home_review" element={<ProvaPageReview/>} />
-        <Route path="prova" element={<Prova />} />   
+        <Route path="/prova" element={<Prova />} />   
         <Route path="/prova_review" element={<ProvaReview />} />  
-        <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} />  
-        <Route path="avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  
-        <Route path="cursos_aluno" element={<CursosAluno />} />  
+        <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} /> 
+        <Route path="/prova_expirada" element={<ProvaPageExpirada />} />   
+        <Route path="/avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  
+        <Route path="/cursos_aluno" element={<CursosAluno />} />  
         <Route path="/pagina_curso" element={<PaginaCurso />} />  
+        <Route path="/revisoes_home" element={<HomeRevisoes />} />  
         
            </Routes>
 
