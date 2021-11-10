@@ -12,7 +12,8 @@ import QuestaoMultiplaEscolha from '../Components/Prova/QuestãoMultiplaEscolha'
 import QuestaoMultiplaEscolhaRevisada from '../Components/ProvaRevisada/QuestãoMultiplhaEscolhaRevisada';
 import QuestaoDissertativaRevisada from '../Components/ProvaRevisada/QuestãoDissertativaRevisada';
 import { Routes, Route, Link } from "react-router-dom";
-
+import QuestaoMultiplaEscolhaRevisadaProfessor from './../Components/ProvaRevisada/QuestãoMultiplhaEscolhaRevisadaProfessor';
+import QuestaoDissertativaRevisadaProfessor from './../Components/ProvaRevisada/QuestãoDissertativaRevisadaProfessor';
 const ProvaBox = styled.div`
 padding: 32px;
 width: 60vw;
@@ -84,13 +85,13 @@ const steps = [
 
 const Questions = [
 
-  <QuestaoMultiplaEscolhaRevisada number = {1} index ={1}/>,
-  <QuestaoDissertativaRevisada number = {2} index ={1}/>,
-  <QuestaoDissertativaRevisada number = {3} index ={1}/>,
-  <QuestaoDissertativaRevisada number = {4} index ={1}/>,
-  <QuestaoDissertativaRevisada number = {5} index ={1}/>,
-  <QuestaoMultiplaEscolhaRevisada number = {1} index ={1} correct = {true}/>,
-  <QuestaoDissertativaRevisada number = {6} index ={1}/>,
+  <QuestaoMultiplaEscolhaRevisadaProfessor number = {1} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {2} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {3} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {4} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {5} index ={1}/>,
+  <QuestaoMultiplaEscolhaRevisadaProfessor number = {1} index ={1} correct = {true}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {6} index ={1}/>,
 
 
 

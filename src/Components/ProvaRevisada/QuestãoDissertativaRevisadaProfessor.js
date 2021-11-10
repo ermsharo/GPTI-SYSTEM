@@ -65,7 +65,31 @@ export default function QuestaoDissertativaRevisadaProfessor({number, index}) {
           <br/>
           <br/>
           <Typography gutterBottom variant="h5" component="div" style = {{color: '#424242'}}>
-         Comentarios do professor
+         Comentarios do professor da primeira correção
+
+          </Typography>
+
+          <Typography gutterBottom variant="h6" component="div" style = {{color: '#424242'}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt turpis. 
+          Nullam ultricies, magna vel ultrices fermentum, ex ante laoreet mi, nec mollis tortor lacus et ligula
+          </Typography>
+
+          <br/>
+          <br/>
+          <Typography gutterBottom variant="h5" component="div" style = {{color: '#424242'}}>
+         Pedido de revisão do aluno
+
+          </Typography>
+
+          <Typography gutterBottom variant="h6" component="div" style = {{color: '#424242'}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt turpis. 
+          Nullam ultricies, magna vel ultrices fermentum, ex ante laoreet mi, nec mollis tortor lacus et ligula
+          </Typography>
+
+          <br/>
+          <br/>
+          <Typography gutterBottom variant="h5" component="div" style = {{color: '#424242'}}>
+         Comentarios do professor após a revisão 
 
           </Typography>
 
@@ -75,21 +99,23 @@ export default function QuestaoDissertativaRevisadaProfessor({number, index}) {
           </Typography>
 
 
+
           <br/>
 <br/>
           <Typography gutterBottom variant="h5" component="div" >
-         Nota final (0.5 / 1.0)
+         Nota antes da revisão  (0.5 / 1.0)
+
+          </Typography>
+
+          <Typography gutterBottom variant="h5" component="div" >
+         Nota após da revisão  (0.75 / 1.0)
 
           </Typography>
           <br/>
 <br/>
 
-          <Button onClick={()=>{setOpen(true)}} >
-                Solicitar revisão 
-                 </Button>
-
+    
      
-         
          
          
           <Box
@@ -113,43 +139,7 @@ export default function QuestaoDissertativaRevisadaProfessor({number, index}) {
 
     
     </Box>
-    <Dialog onClose={()=>{setOpen(!open)}} open={open}>
-    <Box>
-      <DialogTitle>
 
-      <Typography gutterBottom variant="h5" component="div" >
-      Escreva o seu pedido de revisão
-
-          </Typography>
-
-      </DialogTitle>
-      <DialogContent>
-          <DialogContentText>
-          Prova 01 - Questão {number} 
-          </DialogContentText>
-          <br/> <br/>
-          <TextField
-          id="outlined-multiline-static"
-          label="Pedido de revisão "
-          multiline
-          rows={4}
-          defaultValue=""
-        />
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-        <Button onClick={()=>{setOpen(!open)}} >
-                Enviar pedido de revisão 
-                 </Button>
-        </DialogContent>
-
-
-
-    </Box>
-    </Dialog>
     </div>
   );
 }

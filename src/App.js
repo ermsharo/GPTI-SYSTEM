@@ -15,6 +15,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import ProvaReview from './Pages/ProvaReview';
+import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
 
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
         <Route path="/prova_home_new" element={<ProvaPageNew />} />
         <Route path="/prova_home_review" element={<ProvaPageReview/>} />
         <Route path="prova" element={<Prova />} />   
-        <Route path="prova_review" element={<ProvaReview />} />  
+        <Route path="/prova_review" element={<ProvaReview />} />  
+        <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} />  
         <Route path="avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  
         <Route path="cursos_aluno" element={<CursosAluno />} />  
         <Route path="/pagina_curso" element={<PaginaCurso />} />  
