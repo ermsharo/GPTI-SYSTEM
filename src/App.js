@@ -18,6 +18,9 @@ import ProvaReview from './Pages/ProvaReview';
 import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
 import ProvaPageExpirada from './Pages/ProvaPageExpirada';
 import HomeRevisoes from './Pages/HomeRevisões';
+import HomeProfessor from './Pages/HomeProfessor';
+import TurmasProfessor from './Pages/TurmasProfessor';
+import CadastroTurma from './Pages/CadastroTurma';
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
 
 <BrowserRouter>
     <StyledEngineProvider injectFirst>
+
+
 
 
 
@@ -41,6 +46,9 @@ function App() {
         <Route path="/cursos_aluno" element={<CursosAluno />} />  
         <Route path="/pagina_curso" element={<PaginaCurso />} />  
         <Route path="/revisoes_home" element={<HomeRevisoes />} />  
+        <Route path="/home_professor" element={<HomeProfessor />} />  
+        <Route path="/turmas" element={<TurmasProfessor />} />  
+        <Route path="/adicionar_turma" element={<CadastroTurma />} /> 
         
            </Routes>
 
