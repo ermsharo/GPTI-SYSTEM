@@ -56,7 +56,7 @@ img{
 const LoginBox = styled.div`
 
 width: 100%;
-border: 2px solid black; 
+
 
 `
 const FormPading = styled.div`
@@ -82,7 +82,7 @@ export default function UseFormControl() {
 
     <FormPading>
 
-        <Link to="/home"><Button variant="contained" fullWidth >Contained</Button></Link>
+        <Link to="/home"><Button variant="contained" fullWidth >Entrar</Button></Link>
         </FormPading>
         <ForgetPassword>Esqueceu a senha</ForgetPassword>
       </FormControl>

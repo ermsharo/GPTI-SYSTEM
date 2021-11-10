@@ -58,13 +58,17 @@ const OurAvaliation = (name, status) =>{
 
 
   let statusColor; 
+  let link = '/'; 
 
 if(status == 0){
   statusColor = "#797979"
+  link = "/prova_home_new"
 }
 
 if(status == 1){
   statusColor = "#8AC249"
+  link = "/prova_home_review"
+
 }
 if(status == 2){
   statusColor = "#F34235"
@@ -76,7 +80,7 @@ if(status == 3){
 
 
   return(
-    <Link to = "/prova">
+    <Link to = {link}>
    <Paper elevation={1} style = {{padding: '16px'}}>
    <ProvaButton style ={{color: statusColor}}>
     <div>
