@@ -20,6 +20,10 @@ export function createDataRevisao(nome, status, data_limite, nota, type) {
   return { nome, status, data_limite, nota, type };
 }
 
+export function createDataProvasProfessor(nome, status, tema, duracao, data_limite, turma, type) {
+  return { nome, status, tema, duracao, data_limite, turma, type };
+}
+
 
 export function DataTable({columns, rows, isReview}) {
   let statusData = {};
@@ -71,13 +75,16 @@ export function DataTable({columns, rows, isReview}) {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code} onClick={() => {
-                    navigate(statusData[row["type"]][0]);
-                  }} >
+                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code} >
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (
-                          <TableCell key={column.id} align={column.align} sx={{color: statusData[row["type"]][1]}} >
+                          <TableCell key={column.id} align={column.align} sx={{color: statusData[row["type"]][1]}} onClick={() => {
+                            if(column.id != 'turma')
+                              navigate(statusData[row["type"]][0]);
+                            else
+                              navigate('/lista_provas_turma')
+                          }} >
                             {column.id === "nome" && <DescriptionIcon/>}
                             {column.format && typeof value === 'number'
                               ? column.format(value)

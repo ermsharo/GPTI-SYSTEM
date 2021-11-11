@@ -89,7 +89,7 @@ export default function HomeProfessor() {
 
 
     <div>
-    {OurCardButton('Gerar provas','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg', "/revisoes_home")}
+    {OurCardButton('Gerenciar provas','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg', "/provas_professor")}
     </div>
 
 

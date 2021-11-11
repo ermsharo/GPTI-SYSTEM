@@ -26,6 +26,9 @@ import PerguntasProfessor from './Pages/ProfessorPerguntas';
 import CadastroPerguntaProfessor from './Pages/ProfessorCadastraPergunta'; 
 import CadastroTurmaProfessor from './Pages/ProfessorCadastraTurma'; 
 import PerguntaProfessor from './Pages/PerguntaReview'; 
+import ProvasProfessor from './Pages/ProfessorProvas'; 
+import ListaAlunosProfessor from './Pages/ProfessorListaAlunos'; 
+import ListaProvasTurmaProfessor from './Pages/ProfessorListaProvasTurma'; 
 
 export let theme = createTheme({
   palette: {
@@ -79,6 +82,9 @@ function App() {
               <Route path="/adicionar_pergunta" element={<CadastroPerguntaProfessor />} /> 
               <Route path="/adicionar_turma" element={<CadastroTurmaProfessor />} /> 
               <Route path="/pergunta" element={<PerguntaProfessor />} /> 
+              <Route path="/provas_professor" element={<ProvasProfessor />} /> 
+              <Route path="/lista_alunos" element={<ListaAlunosProfessor />} /> 
+              <Route path="/lista_provas_turma" element={<ListaProvasTurmaProfessor />} /> 
             </Routes>
           </ThemeProvider>
         </StyledEngineProvider>

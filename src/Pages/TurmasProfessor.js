@@ -83,14 +83,14 @@ export default function TurmasProfessor() {
       </Thead>
       <Tbody>
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/>  XYZ 1 </Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/lista_alunos">   <DescriptionIcon/>  XYZ 1 </Link>    </Typography> </Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Engenharia de Sistemas II  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  2º/2021</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 30 </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center" style = {{color :'#8AC249'}} > Ativo </Typography></Td>
         </Tr>
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/>  XYZ 2 </Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/lista_alunos">   <DescriptionIcon/>  XYZ 2 </Link>    </Typography> </Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Engenharia de Sistemas I  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  1º/2021</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 30 </Typography></Td>
@@ -102,7 +102,7 @@ export default function TurmasProfessor() {
         </Tr>
 
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/>  XYZ 3 </Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/lista_alunos">   <DescriptionIcon/>  XYZ 3 </Link>    </Typography> </Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Engenharia de Sistemas III  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  2º/2021</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 30 </Typography></Td>

@@ -147,7 +147,7 @@ Cadasto de pergunta
           labelId="demo-simple-select-helper-label"
           id="demo-simple-select-helper"
           value={ops}
-          label="Tipo de questão"
+          label="Opção Correta"
           onChange={handleChange2}
         >
           <MenuItem value="">
