@@ -164,7 +164,7 @@ Cadasto de pergunta
     
     </FormBoxBullet>
 
-   <Link to = "/perguntas"> <Button variant="contained" color = "primary" fullWidth >Criar pergunta  &nbsp; <Icon color="white">check</Icon> </Button> </Link>
+   <Link to = "/perguntas"> <Button variant="contained" color = "primary" fullWidth >Criar pergunta  &nbsp; <Icon color="white">add_circle</Icon> </Button> </Link>
       </PageBox>
       </div>
     </>

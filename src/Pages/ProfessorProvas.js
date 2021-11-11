@@ -4,7 +4,9 @@ import styled from 'styled-components'
 import Headers from '../Components/Header';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import {DataTable, createDataProvasProfessor} from "../Components/TableAvaliacao/Table"
-
+import Button from '@material-ui/core/Button';
+import { Routes, Route, Link } from "react-router-dom";
+import Icon from '@mui/material/Icon';
 
 const PageBox = styled.div`
  width: 60vw; 
@@ -44,6 +46,7 @@ export default function ProvasProfessor() {
       <Headers />
       <PageBox>
         <DataTable columns={columns} rows={rows} isReview={true}/>
+        <Link to = "/adicionar_provas_professor"> <Button variant="contained" color = "primary" fullWidth >Criar prova  &nbsp; <Icon color="white">add_circle</Icon> </Button> </Link>
       </PageBox>
     </>
   );
