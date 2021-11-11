@@ -79,7 +79,10 @@ const steps = [
     label: 'Questão 6',
     description: ``,
   },
-
+  {
+    label: 'Questão 7',
+    description: ``,
+  },
 ];
 
 const Questions = [
@@ -178,7 +181,7 @@ export default function ProvaReview() {
         
              sx={{ mt: 1, mr: 1 }}
            >
-    <Link to = "/pagina_curso">Encerar revisão</Link>
+    <Link to = "/pagina_curso">Encerrar revisão</Link>
            </Button> </div>}
 
               </NavigationBox>

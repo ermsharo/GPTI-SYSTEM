@@ -84,7 +84,7 @@ export default function HomeProfessor() {
     </div>
 
     <div>
-    {OurCardButton('Pedidos de revisão','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg', "/revisoes_home")}
+    {OurCardButton('Pedidos de revisão','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg', "/revisoes_professor")}
     </div>
 
 

@@ -19,6 +19,7 @@ import ProvaReviewAluno from './Pages/ProvaReviewAluno';
 import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
 import ProvaPageExpirada from './Pages/ProvaPageExpirada';
 import HomeRevisoes from './Pages/HomeRevisões';
+import RevisoesProfessor from './Pages/RevisoesProfessor';
 import HomeProfessor from './Pages/HomeProfessor';
 import TurmasProfessor from './Pages/TurmasProfessor';
 import CadastroTurma from './Pages/CadastroTurma';
@@ -29,6 +30,8 @@ import PerguntaProfessor from './Pages/PerguntaReview';
 import ProvasProfessor from './Pages/ProfessorProvas'; 
 import ListaAlunosProfessor from './Pages/ProfessorListaAlunos'; 
 import ListaProvasTurmaProfessor from './Pages/ProfessorListaProvasTurma'; 
+import ProvaReviewProfessorAct from './Pages/ProvaReviewProfessorAct';
+import ProfessorAvaliar from './Pages/ProvaProfessorAvaliar';
 
 export let theme = createTheme({
   palette: {
@@ -70,12 +73,15 @@ function App() {
               <Route path="/prova_review" element={<ProvaReview />} />  
               <Route path="/prova_review_aluno" element={<ProvaReviewAluno />} />  
               <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} /> 
+              <Route path="/prova_review_professor_act" element={<ProvaReviewProfessorAct/>} />  
               <Route path="/prova_expirada" element={<ProvaPageExpirada />} />   
               <Route path="/avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  
               <Route path="/cursos_aluno" element={<CursosAluno />} />  
               <Route path="/pagina_curso" element={<PaginaCurso />} />  
               <Route path="/revisoes_home" element={<HomeRevisoes />} />  
+              <Route path="/revisoes_professor" element={<RevisoesProfessor />} />  
               <Route path="/home_professor" element={<HomeProfessor />} />  
+              <Route path="/professor_avaliar" element={<ProfessorAvaliar />} />  
               <Route path="/turmas" element={<TurmasProfessor />} />  
               <Route path="/adicionar_turma" element={<CadastroTurma />} /> 
               <Route path="/perguntas" element={<PerguntasProfessor />} />  

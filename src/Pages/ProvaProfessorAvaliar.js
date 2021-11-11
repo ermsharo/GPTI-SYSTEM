@@ -8,14 +8,17 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Headers from '../Components/Header/index';
 import { Routes, Route, Link } from "react-router-dom";
-import QuestaoMultiplaEscolhaNaoRevisadaProfessor from '../Components/ProvaNaoRevisada/QuestãoMultiplhaEscolhaNaoRevisadaProfessor';
-import QuestaoDissertativaNaoRevisadaProfessor from '../Components/ProvaNaoRevisada/QuestãoDissertativaNaoRevisadaProfessor';
+import QuestaoMultiplaEscolhaRevisadaProfessor from '../Components/ProvaCorrigir/multiplaInput';
+import QuestaoDissertativaRevisadaProfessor from '../Components/ProvaCorrigir/dissertativaInput';
 const ProvaBox = styled.div`
 padding: 32px;
 width: 60vw;
 margin: auto;
 
+
+
 `
+
 const QuestionBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,8 +35,17 @@ const NavigationBox = styled.div`
 margin-right: 16px;
 display: flex;
 justify-content: space-between;
+
+
+
 `
+
+
+
 const IndexBox = styled.div`
+
+
+
 `
 
 
@@ -70,17 +82,17 @@ const steps = [
 ];
 
 const Questions = [
-  <QuestaoMultiplaEscolhaNaoRevisadaProfessor number = {1} index ={1}/>,
-  <QuestaoDissertativaNaoRevisadaProfessor number = {2} index ={1}/>,
-  <QuestaoDissertativaNaoRevisadaProfessor number = {3} index ={1}/>,
-  <QuestaoDissertativaNaoRevisadaProfessor number = {4} index ={1}/>,
-  <QuestaoDissertativaNaoRevisadaProfessor number = {5} index ={1}/>,
-  <QuestaoMultiplaEscolhaNaoRevisadaProfessor number = {6} index ={1} correct = {true}/>,
-  <QuestaoDissertativaNaoRevisadaProfessor number = {7} index ={1}/>,
+  <QuestaoMultiplaEscolhaRevisadaProfessor number = {1} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {2} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {3} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {4} index ={1}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {5} index ={1}/>,
+  <QuestaoMultiplaEscolhaRevisadaProfessor number = {6} index ={1} correct = {true}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {7} index ={1}/>,
 ]
 let CorrectAwnsers = [true, true, true, false, false, true]; 
 
-export default function ProvaNaoReview() {
+export default function ProvaReview() {
 
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -136,7 +148,7 @@ export default function ProvaNaoReview() {
     
  
 </QuestionBox>
-    <NavigationBox sx={{ mb: 2 }}>
+<NavigationBox sx={{ mb: 2 }}>
                 <div>
 
 
@@ -165,10 +177,14 @@ export default function ProvaNaoReview() {
         
              sx={{ mt: 1, mr: 1 }}
            >
-              <Link to = "/pagina_curso">Encerar revisão</Link>
-                </Button> </div>}
-    </NavigationBox>
+          <Link to = "/home_professor">Encerrar revisão</Link>
+           </Button> </div>}
+      </NavigationBox>
     </ProvaBox>
+
+    
+    
+
     </>
   );
 }
