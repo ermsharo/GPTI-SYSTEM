@@ -47,6 +47,7 @@ export function DataTable({columns, rows, isReview, isProfessor}) {
       statusData.progress = ["/prova_home_new", theme.palette.progress.main];
       statusData.success = ["/prova_home_review", theme.palette.success.main];
       statusData.failed = ["/prova_expirada", theme.palette.failed.main];
+      statusData.warning = ["", theme.palette.warning.main];
     }
   }
 
