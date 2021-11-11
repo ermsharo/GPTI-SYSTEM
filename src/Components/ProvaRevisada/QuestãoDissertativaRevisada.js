@@ -97,7 +97,6 @@ export default function QuestaoDissertativaRevisadaProfessor({number, index}) {
       sx={{
         '& .MuiTextField-root': { m: 1, width: '90%'
   ,     
-   minHeight:'400px',
    margin : 'auto' },
       }}
       noValidate

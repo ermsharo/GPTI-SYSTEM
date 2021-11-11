@@ -23,20 +23,19 @@ margin: auto;
 
 `
 
-
-
 const QuestionBox = styled.div`
+  display: flex;
+  flex-direction: column;
 
-display: grid;
-grid-template-columns: 200px auto;
-padding-top: 64px;
-
-
+  @media (min-width: 700px) {
+      display: grid;
+      grid-template-columns: 200px auto;
+      padding-top: 64px;
+    }
 `
 
 const NavigationBox = styled.div`
 
-margin-left: 200px;
 margin-right: 16px;
 display: flex;
 justify-content: space-between;
@@ -84,17 +83,13 @@ const steps = [
 ];
 
 const Questions = [
-
   <QuestaoMultiplaEscolhaRevisadaProfessor number = {1} index ={1}/>,
   <QuestaoDissertativaRevisadaProfessor number = {2} index ={1}/>,
   <QuestaoDissertativaRevisadaProfessor number = {3} index ={1}/>,
   <QuestaoDissertativaRevisadaProfessor number = {4} index ={1}/>,
   <QuestaoDissertativaRevisadaProfessor number = {5} index ={1}/>,
-  <QuestaoMultiplaEscolhaRevisadaProfessor number = {1} index ={1} correct = {true}/>,
-  <QuestaoDissertativaRevisadaProfessor number = {6} index ={1}/>,
-
-
-
+  <QuestaoMultiplaEscolhaRevisadaProfessor number = {6} index ={1} correct = {true}/>,
+  <QuestaoDissertativaRevisadaProfessor number = {7} index ={1}/>,
 ]
 let CorrectAwnsers = [true, true, true, false, false, true]; 
 

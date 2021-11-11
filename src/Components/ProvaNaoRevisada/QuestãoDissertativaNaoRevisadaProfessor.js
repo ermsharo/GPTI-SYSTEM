@@ -17,7 +17,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 
-export default function QuestaoDissertativaRevisadaProfessor({number, index}) {
+export default function QuestaoDissertativaNaoRevisadaProfessor({number, index}) {
 
 
   const [value, setValue] = React.useState('');
@@ -87,31 +87,12 @@ export default function QuestaoDissertativaRevisadaProfessor({number, index}) {
           </Typography>
 
           <br/>
-          <br/>
-          <Typography gutterBottom variant="h5" component="div" style = {{color: '#424242'}}>
-         Comentarios do professor após a revisão 
-
-          </Typography>
-
-          <Typography gutterBottom variant="h6" component="div" style = {{color: '#424242'}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt turpis. 
-          Nullam ultricies, magna vel ultrices fermentum, ex ante laoreet mi, nec mollis tortor lacus et ligula
-          </Typography>
-
-
-
-          <br/>
+        
 <br/>
           <Typography gutterBottom variant="h5" component="div" >
          Nota antes da revisão  (0.5 / 1.0)
 
           </Typography>
-
-          <Typography gutterBottom variant="h5" component="div" >
-         Nota após da revisão  (0.75 / 1.0)
-
-          </Typography>
-          <br/>
 <br/>
 
     

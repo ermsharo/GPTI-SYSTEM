@@ -13,25 +13,23 @@ const ProvaBox = styled.div`
 padding: 32px;
 width: 60vw;
 margin: auto;
-
-
-
 `
 
 
 
 const QuestionBox = styled.div`
+  display: flex;
+  flex-direction: column;
 
-display: grid;
-grid-template-columns: 200px auto;
-padding-top: 64px;
-
-
+  @media (min-width: 700px) {
+      display: grid;
+      grid-template-columns: 200px auto;
+      padding-top: 64px;
+    }
 `
 
 const NavigationBox = styled.div`
 
-margin-left: 200px;
 margin-right: 16px;
 display: flex;
 justify-content: space-between;
@@ -79,15 +77,13 @@ const steps = [
 ];
 
 const Questions = [
-
   <QuestaoMultiplaEscolha number = {1} index ={1}/>,
   <QuestaoDissertativa number = {2} index ={1}/>,
   <QuestaoDissertativa number = {3} index ={1}/>,
   <QuestaoDissertativa number = {4} index ={1}/>,
-  <QuestaoMultiplaEscolha number = {1} index ={1}/>,
-  <QuestaoDissertativa number = {5} index ={1}/>,
+  <QuestaoMultiplaEscolha number = {5} index ={1}/>,
   <QuestaoDissertativa number = {6} index ={1}/>,
-
+  <QuestaoDissertativa number = {7} index ={1}/>,
 ]
 
 export default function UseFormControl() {
@@ -116,7 +112,7 @@ export default function UseFormControl() {
           <QuestionBox>
 
           <IndexBox>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper activeStep={activeStep} orientation="vertical" style={{ marginBottom: "30px" }}>
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel
@@ -147,11 +143,6 @@ export default function UseFormControl() {
                   >
                  Questão {(activeStep-1) + 1}
                   </Button>}
-             
-
-
-         
-         
                 </div>
                 <div>         {(activeStep > Questions.length -2) ? null :  <Button
              onClick={handleNext}
@@ -159,8 +150,6 @@ export default function UseFormControl() {
            >
         Questão {(activeStep+1)+1}
            </Button>}</div>
-
-
                {(activeStep < Questions.length -1 ) ? null :    <div>   <Button
         
              sx={{ mt: 1, mr: 1 }}

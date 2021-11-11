@@ -48,7 +48,6 @@ export default function QuestaoMultiplaEscolha({number, index, correct}) {
       sx={{
         '& .MuiTextField-root': { m: 1, width: '90%'
   ,     
-   minHeight:'400px',
    margin : 'auto' },
       }}
       noValidate

@@ -96,17 +96,6 @@ export default function QuestaoMultiplaEscolha({number, index, correct}) {
 
           <br/>
           <br/>
-          <Typography gutterBottom variant="h5" component="div" style = {{color: '#424242'}}>
-         Comentarios do professor após a revisão 
-
-          </Typography>
-
-          <Typography gutterBottom variant="h6" component="div" style = {{color: '#424242'}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt turpis. 
-          Nullam ultricies, magna vel ultrices fermentum, ex ante laoreet mi, nec mollis tortor lacus et ligula
-          </Typography>
-
-
 
           <br/>
 <br/>
@@ -114,13 +103,6 @@ export default function QuestaoMultiplaEscolha({number, index, correct}) {
          Nota antes da revisão  (0.0 / 1.0)
 
           </Typography>
-
-          <Typography gutterBottom variant="h5" component="div" >
-         Nota após da revisão  (0.2 / 1.0)
-
-          </Typography>
-          <br/>
-<br/>
 
 
     <br/>

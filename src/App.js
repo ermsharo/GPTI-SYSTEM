@@ -15,6 +15,7 @@ import PaginaCurso from './Pages/PaginaCurso';
 import AvaliacoesPendentes from './Pages/AvaliacoesPendentes';
 import './App.css';
 import ProvaReview from './Pages/ProvaReview';
+import ProvaReviewAluno from './Pages/ProvaReviewAluno';
 import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
 import ProvaPageExpirada from './Pages/ProvaPageExpirada';
 import HomeRevisoes from './Pages/HomeRevisões';
@@ -62,6 +63,7 @@ function App() {
               <Route path="/prova_home_review" element={<ProvaPageReview/>} />
               <Route path="/prova" element={<Prova />} />   
               <Route path="/prova_review" element={<ProvaReview />} />  
+              <Route path="/prova_review_aluno" element={<ProvaReviewAluno />} />  
               <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} /> 
               <Route path="/prova_expirada" element={<ProvaPageExpirada />} />   
               <Route path="/avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  

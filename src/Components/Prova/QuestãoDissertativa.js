@@ -35,9 +35,7 @@ export default function QuestaoDissertativa({number, index}) {
           <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '90%'
-  ,     
-   minHeight:'400px',
+        '& .MuiTextField-root': { m: 1, width: '90%',
    margin : 'auto' },
       }}
       noValidate
