@@ -73,7 +73,10 @@ const steps = [
     label: 'Questão 6',
     description: ``,
   },
-
+  {
+    label: 'Questão 7',
+    description: ``,
+  },
 ];
 
 const Questions = [

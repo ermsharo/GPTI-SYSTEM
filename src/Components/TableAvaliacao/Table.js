@@ -21,7 +21,7 @@ export function createDataRevisao(nome, status, data_limite, nota, type) {
 }
 
 
-export function DataTable({columns, rows, isReview}) {
+export function DataTable({columns, rows, isReview, isProfessor}) {
   let statusData = {};
   const navigate = useNavigate();
 
@@ -35,7 +35,12 @@ export function DataTable({columns, rows, isReview}) {
      statusData.failed = ["/prova_expirada", theme.palette.failed.main];
   }
 
+  
   statusData.warning = ["/prova_review_aluno", theme.palette.warning.main];
+  
+  if(isProfessor) {
+    statusData.warning = ["/prova_review_professor_act", theme.palette.warning.main];
+  }
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);

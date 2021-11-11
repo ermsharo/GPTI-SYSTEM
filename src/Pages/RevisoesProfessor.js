@@ -34,17 +34,17 @@ export default function RevisoesProfessor() {
   ];
 
   const rows = [
-    createDataRevisao('Aval 1','A revisar','20/11/2021', 5.0, 'progress'),
+    createDataRevisao('Aval 1','Revisado','20/11/2021', 5.0, 'success'),
     createDataRevisao('Aval 2','Revisado','01/11/2021', 7.0, 'success'),
-    createDataRevisao('Aval 3','Expirado','01/11/2021', 6.5, 'failed'),
+    createDataRevisao('Aval 3','Revisado','01/11/2021', 6.5, 'success'),
     createDataRevisao('Aval 4','Revisando','15/11/2021', 2.4, 'warning'),
-    createDataRevisao('Aval 5','A revisar','20/11/2021', 4.5, 'progress'),
-    createDataRevisao('Aval 6','Revisado','17/10/2021', 4.9, 'success'),
-    createDataRevisao('Aval 7','Expirado','17/10/2021', 9.8, 'failed'),
-    createDataRevisao('Aval 8','A revisar','20/11/2021', 1.1, 'progress'),
-    createDataRevisao('Aval 9','Expirado','17/10/2021', 8.4, 'failed'),
+    createDataRevisao('Aval 5','Revisando','20/11/2021', 4.5, 'warning'),
+    createDataRevisao('Aval 6','Revisando','17/10/2021', 4.9, 'warning'),
+    createDataRevisao('Aval 7','Revisando','17/10/2021', 9.8, 'warning'),
+    createDataRevisao('Aval 8','Revisando','20/11/2021', 1.1, 'warning'),
+    createDataRevisao('Aval 9','Revisando','17/10/2021', 8.4, 'warning'),
     createDataRevisao('Aval 10','Revisando','13/11/2021', 3.6, 'warning'),
-    createDataRevisao('Aval 11','Revisado','08/11/2021', 3.4, 'success'), 
+    createDataRevisao('Aval 11','Revisando','08/11/2021', 3.4, 'warning'), 
   ]
 
   return (
