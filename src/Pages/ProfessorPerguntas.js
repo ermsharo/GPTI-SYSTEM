@@ -82,21 +82,21 @@ export default function PerguntasProfessor() {
       </Thead>
       <Tbody>
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/> Pergunta 1</Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/pergunta">   <DescriptionIcon/> Pergunta 1</Link>    </Typography> </Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Engenharia de Sistemas...  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Boas Práticas</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Ativo </Typography></Td>
         </Tr>
        
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/> Pergunta 2</Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/pergunta">   <DescriptionIcon/> Pergunta 2</Link>    </Typography> </Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Engenharia de Sistemas...  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Boas Práticas</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Ativo </Typography></Td>
         </Tr>
 
         <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/prova_review">   <DescriptionIcon/> Pergunta 3</Link>    </Typography> </Td>
+          <Td><Typography gutterBottom variant="h6" component="div" align = "center"><Link to = "/pergunta">   <DescriptionIcon/> Pergunta 3</Link>    </Typography> </Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Gestão de projetos...  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Boas Práticas</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Ativo </Typography></Td>

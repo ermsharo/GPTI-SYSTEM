@@ -34,15 +34,9 @@ export default function AvaliacoesPendentes() {
   ];
 
   const rows = [
-    createDataRevisao('Aval 1','A revisar','20/11/2021', 5.0, 'progress'),
     createDataRevisao('Aval 2','Revisado','01/11/2021', 7.0, 'success'),
-    createDataRevisao('Aval 3','Expirado','01/11/2021', 6.5, 'failed'),
     createDataRevisao('Aval 4','Revisando','15/11/2021', 2.4, 'warning'),
-    createDataRevisao('Aval 5','A revisar','20/11/2021', 4.5, 'progress'),
     createDataRevisao('Aval 6','Revisado','17/10/2021', 4.9, 'success'),
-    createDataRevisao('Aval 7','Expirado','17/10/2021', 9.8, 'failed'),
-    createDataRevisao('Aval 8','A revisar','20/11/2021', 1.1, 'progress'),
-    createDataRevisao('Aval 9','Expirado','17/10/2021', 8.4, 'failed'),
     createDataRevisao('Aval 10','Revisando','13/11/2021', 3.6, 'warning'),
     createDataRevisao('Aval 11','Revisado','08/11/2021', 3.4, 'success'), 
   ]

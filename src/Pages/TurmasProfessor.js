@@ -94,7 +94,11 @@ export default function TurmasProfessor() {
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">Engenharia de Sistemas I  </Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center">  1º/2021</Typography></Td>
           <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 30 </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center" style = {{color :'#409489'}} > Finalizada </Typography></Td>
+          <Td><Typography gutterBottom variant="h6" component="div">
+                  <Link to = "/turmas">
+                    <Button variant="contained" >Finalizar</Button>
+                  </Link>
+                </Typography></Td>
         </Tr>
 
         <Tr style = {{color: '#797979'}}>
@@ -123,7 +127,7 @@ export default function TurmasProfessor() {
 
 </TableBox>
 <div>
-  <Link to = "/adicionar_pergunta"><Button variant="contained" color = "primary" fullWidth>Adicionar turma  &nbsp; <Icon color="white">add_circle</Icon> </Button></Link>
+  <Link to = "/adicionar_turma"><Button variant="contained" color = "primary" fullWidth>Adicionar turma  &nbsp; <Icon color="white">add_circle</Icon> </Button></Link>
 
 </div>
    </PageBox>

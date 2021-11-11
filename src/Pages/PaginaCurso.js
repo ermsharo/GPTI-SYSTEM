@@ -50,10 +50,10 @@ export default function UseFormControl() {
     createDataAvaliacao('Aval 1', 'Em andamento', '30 min', '-', '-', 'progress'),
     createDataAvaliacao('Aval 2', 'Em andamento', '30 min', '15/07/2021', '5.0', 'progress'),
     createDataAvaliacao('Aval 3', 'Submetida', '30 min', '02/06/2021', '9.0', 'success'),
-    createDataAvaliacao('Aval 4', 'Não submetida', '30 min', '29/05/2021', '6.8', 'failed'),
+    createDataAvaliacao('Aval 4', 'Não submetida', '30 min', '29/05/2021', '0', 'failed'),
     createDataAvaliacao('Aval 5', 'Revisão', '30 min', '22/05/2021', '4.9', 'warning'),
     createDataAvaliacao('Aval 6', 'Submetida', '30 min', '29/05/2021', '6.8', 'success'),
-    createDataAvaliacao('Aval 7', 'Não Submetida', '30 min', '05/04/2021', '4.9', 'failed'),
+    createDataAvaliacao('Aval 7', 'Não Submetida', '30 min', '05/04/2021', '0', 'failed'),
     createDataAvaliacao('Aval 8', 'Revisão', '30 min', '27/03/2021', '4.0', 'warning'),
     createDataAvaliacao('Aval 9', 'Submetida', '30 min', '28/01/2021', '9.0', 'success'),
   ]

@@ -1,24 +1,21 @@
 import * as React from 'react';
 import styled from 'styled-components'
 import Headers from '../Components/Header';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import TextField from '@mui/material/TextField';
 
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@material-ui/core/Button';
 import Icon from '@mui/material/Icon';
+
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 import {
   BrowserRouter as Router,
-  Route,
   Link,
-  Switch,
-  Redirect,
-  useLocation
 } from "react-router-dom";
 
 
@@ -50,45 +47,29 @@ const FormBoxBullet = styled.div`
 
 const ButtonBoxBullet = styled.div`
 
- padding: 24px;
+ padding: 16px;
  display: flex;
  flex-direction: column;
  row-gap: 16px;
 
-
 `
 
-
-
-
-
-  const currencies = [
-    {
-      value: 'USD',
-      label: '2º semestre/2021',
-    },
-    {
-      value: 'EUR',
-      label: '1º semestre/2021',
-    },
-    {
-      value: 'BTC',
-      label: '2º semestre/2020',
-    },
-    {
-      value: 'JPY',
-      label: '1º semestre/2020',
-    },
-  ];
-
 export default function CadastroPergunta() {
-
-  
-  const [currency, setCurrency] = React.useState('EUR');
+  const [question, setQuestion] = React.useState('');
+  const [ops, setOps] = React.useState('');
+  const [value, setValue] = React.useState('');
 
   const handleChange = (event) => {
-    setCurrency(event.target.value);
+    setQuestion(event.target.value);
   };
+  const handleChange2 = (event) => {
+    setOps(event.target.value);
+  };
+  const handleChange3 = (event) => {
+    setValue(event.target.value);
+  };
+  
+
 
   return (
       <>
@@ -97,17 +78,24 @@ export default function CadastroPergunta() {
       <PageBox> 
       <Typography gutterBottom variant="h4" component="div">
 
-Cadasto de turma
+Cadasto de pergunta
      </Typography>
     
     <FormBoxBullet>
 
     <CadastroBoxBullet>
 
-
-    <TextField id="outlined-basic" label="Código" variant="outlined" fullWidth/>
+    <TextField id="outlined-basic" label="Título" variant="outlined" fullWidth/>
     <br/><br/>
-    <TextField id="outlined-basic" label="Disciplina" variant="outlined" fullWidth />
+    <TextField id="outlined-basic" label="Matéria" variant="outlined" fullWidth />
+    <br/><br/>
+    <TextField id="outlined-basic" label="Tema" variant="outlined" fullWidth />
+    <br/><br/>
+    <TextField id="outlined-basic" label="Dificuldade" variant="outlined" fullWidth />
+    <br/><br/>
+    <TextField id="outlined-basic" label="Enunciado" variant="outlined" fullWidth />
+    <br/><br/>
+    <TextField id="outlined-basic" label="Comentário" variant="outlined" fullWidth />
     <br/><br/>
     <Box
       component="form"
@@ -118,40 +106,62 @@ Cadasto de turma
       autoComplete="off"
     >
       <div>
-        <TextField 
-          id="outlined-select-currency"
-          select
-          label="semestre / ano"
-          value={currency}
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-helper-label">Tipo de Questão</InputLabel>
+        <Select sx={{display: 'flex', flexDirection: 'column'}}
+          labelId="demo-simple-select-helper-label"
+          id="demo-simple-select-helper"
+          value={question}
+          label="Tipo de questão"
           onChange={handleChange}
-       
-          fullWidth
         >
-          {currencies.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
+          <MenuItem value="">
+            <em>Dissertativa</em>
+          </MenuItem>
+          <MenuItem value={10}>Optativa</MenuItem>
+          <MenuItem value={20}>Multipla Escolha</MenuItem>
+        </Select>
+      </FormControl>
         
       
       </div>
-    
     </Box>
 
     </CadastroBoxBullet>
+
     <ButtonBoxBullet>
+    <div>
+      <TextField
+          id="outlined-multiline-flexible"
+          label="opções"
+          multiline
+          rows={4}
+          value={value}
+          onChange={handleChange3}
+          fullWidth
+        />
 
-<Button variant="contained" color = "primary" >Importar alunos  &nbsp; <Icon color="white">upload</Icon> </Button>
-
-
-
-<Button variant="contained" color = "primary" >Gerar Link 
-de Ingresso  &nbsp; <Icon color="white">link</Icon> </Button>
-
-
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-helper-label">Tipo de Questão</InputLabel>
+        <Select
+          labelId="demo-simple-select-helper-label"
+          id="demo-simple-select-helper"
+          value={ops}
+          label="Tipo de questão"
+          onChange={handleChange2}
+        >
+          <MenuItem value="">
+            <em>Optativa 1</em>
+          </MenuItem>
+          <MenuItem value={10}>Optativa 2</MenuItem>
+          <MenuItem value={20}>Optativa 3</MenuItem>
+          <MenuItem value={20}>Optativa 4</MenuItem>
+          <MenuItem value={20}>Optativa 5</MenuItem>
+        </Select>
+      </FormControl>
+      </div>
     </ButtonBoxBullet>
-
+    
     </FormBoxBullet>
 
    <Link to = "/perguntas"> <Button variant="contained" color = "primary" fullWidth >Criar pergunta  &nbsp; <Icon color="white">check</Icon> </Button> </Link>

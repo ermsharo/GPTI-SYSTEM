@@ -146,7 +146,7 @@ export default function Header() {
     <UserBox>
     <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
 <UserText>  <Typography gutterBottom variant="h6" component="div">
-  usario@professor.com.br
+  Rogério Satrah Ka
           </Typography></UserText>
 
     </UserBox>

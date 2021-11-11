@@ -23,6 +23,8 @@ import TurmasProfessor from './Pages/TurmasProfessor';
 import CadastroTurma from './Pages/CadastroTurma';
 import PerguntasProfessor from './Pages/ProfessorPerguntas';
 import CadastroPerguntaProfessor from './Pages/ProfessorCadastraPergunta'; 
+import CadastroTurmaProfessor from './Pages/ProfessorCadastraTurma'; 
+import PerguntaProfessor from './Pages/PerguntaReview'; 
 
 export let theme = createTheme({
   palette: {
@@ -73,6 +75,8 @@ function App() {
               <Route path="/adicionar_turma" element={<CadastroTurma />} /> 
               <Route path="/perguntas" element={<PerguntasProfessor />} />  
               <Route path="/adicionar_pergunta" element={<CadastroPerguntaProfessor />} /> 
+              <Route path="/adicionar_turma" element={<CadastroTurmaProfessor />} /> 
+              <Route path="/pergunta" element={<PerguntaProfessor />} /> 
             </Routes>
           </ThemeProvider>
         </StyledEngineProvider>

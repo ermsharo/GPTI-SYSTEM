@@ -16,7 +16,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 const HeaderBox = styled.div`
 
-width: 100%;
+width: 80%;
 margin:auto;
 
 
@@ -27,6 +27,10 @@ const HeaderDisplay = styled.div`
 
 
 display:flex; 
+
+@media(max-width: 700px){
+  display:block;
+}
 
 padding-top: 10px;
 margin: auto;
@@ -48,7 +52,7 @@ line-height: 80px;
 
 const PageBox = styled.div`
  
- width: 60vw;
+ width: 60%;
  margin: auto; 
  margin-top: 64px;
 
@@ -67,40 +71,26 @@ const MinhasMateriasComp = () =>{
             <HeaderBox>
               <Toolbar>
                 <HeaderDisplay>
-         
-      
-          <UserText>  <Typography gutterBottom variant="h6" component="div">
-       Materia 1 
+                    <UserText>  <Typography gutterBottom variant="h6" component="div">
+                Materia 1 
                 </Typography></UserText>
-      
-      
-      <UserText>  <Typography gutterBottom variant="h6" component="div">
+                <UserText>  <Typography gutterBottom variant="h6" component="div">
       Nome do professor
                 </Typography></UserText>
-      
-      
-      
-             
-      
-      
                 <UserText>  <Typography gutterBottom variant="h6" component="div">
                            <Badge badgeContent={4} color="warning">
                            <DescriptionIcon color = "action"/> 
       </Badge>
             
                 </Typography></UserText>          
-      
                 <UserText>  <Typography gutterBottom variant="h6" component="div">
-               
-
-<Link to = "/pagina_curso">
-<Button variant="contained" fullWidth >Acessar</Button>
-</Link>
+                  <Link to = "/pagina_curso">
+                    <Button variant="contained" >Acessar</Button>
+                  </Link>
                 </Typography></UserText>  
       
-          </HeaderDisplay>
+                </HeaderDisplay>
               </Toolbar>
-      
               </HeaderBox>
             </AppBar>
           </Box>
