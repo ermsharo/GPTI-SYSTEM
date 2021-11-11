@@ -1,144 +1,71 @@
 import * as React from 'react';
 import styled from 'styled-components'
 import Headers from '../Components/Header';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import DescriptionIcon from '@mui/icons-material/Description';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  Redirect,
-  useLocation
-} from "react-router-dom";
-import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import {DataTable, createDataAvaliacao} from "../Components/TableAvaliacao/Table"
 
-const Grid = styled.div`
-
-display: grid; 
-grid-template-columns: 1fr 1fr ;
-width: 60vw;
-margin: auto;
-margin-top: 20vh;
-column-gap: 5vw;
-row-gap: 5vw;
-
-`
 const PageBox = styled.div`
-
-width: 60vw;
-margin: auto;
-
+  width: 100vw;
+  margin: auto;
+  
+  @media (min-width: 750px){
+    width: 60vw;
+    margin: 0;
+  }
 `
-
-
-
-const ProvaButton = styled.div`
-
- display: flex;
- flex-direction: column;
- text-align: center; 
-
-`
-const DisplayGrid = styled.div`
-display: grid; 
- grid-template-columns: 1fr 1fr 1fr 1fr;
- padding: 64px; 
- column-gap: 24px;
- row-gap: 24px;
-
-`
-
-
-const OurAvaliation = (name, status) =>{
-
-
-  let statusColor; 
-  let link = '/'; 
-
-if(status == 0){
-  statusColor = "#797979"
-  link = "/prova_home_new"
-}
-
-if(status == 1){
-  statusColor = "#8AC249"
-  link = "/prova_home_review"
-
-}
-if(status == 2){
-  statusColor = "#F34235"
-  link = "/prova_expirada"
-}
-if(status == 3){
-  statusColor = "#fe9700"
-   link = '/'
-}
-
-
-
-  return(
-    (status != 3) ?
-  
-      <>
-      <Link to = {link}>
-    <Paper elevation={1} style = {{padding: '16px'}}>
-    <ProvaButton style ={{color: statusColor}}>
-     <div>
-     <DescriptionIcon style ={{fontSize: '64px'}}/>
-     </div>
-     <div>
-     <Typography gutterBottom variant="h5" component="div">
-        {name}
-     </Typography>
-     </div>
-    </ProvaButton>
-    </Paper>
-       </Link>
-       
-       </>
-       : 
-
-       <Paper elevation={1} style = {{padding: '16px'}}>
-       <ProvaButton style ={{color: statusColor}}>
-        <div>
-        <DescriptionIcon style ={{fontSize: '64px'}}/>
-        </div>
-        <div>
-        <Typography gutterBottom variant="h5" component="div">
-           {name}
-        </Typography>
-        </div>
-       </ProvaButton>
-       </Paper>
-  
-  
-  
-  )
-
-}
-
 
 export default function UseFormControl() {
+  const [checkedIn, setCheckedIn] = React.useState(false);
+
+  function checkIn() {
+    if(!checkedIn) {
+      alert("Presença salva!");
+      setCheckedIn(true);
+    }
+  }
+
+  const columns = [
+    { id: 'nome', label: 'Avaliação', minWidth: 80 , align: 'center'},
+    { id: 'status', label: 'Status', minWidth: 100, align: 'center'},
+    {
+      id: 'duracao',
+      label: 'Duração',
+      minWidth: 80,
+      align: 'center',
+    },
+    {
+      id: 'data_limite',
+      label: 'Data limite para questionamento',
+      minWidth: 80,
+      align: 'center',
+    },
+    {
+      id: 'nota',
+      label: 'Nota',
+      minWidth: 50,
+      align: 'center',
+    },
+  ];
+
+  const rows = [
+    createDataAvaliacao('Aval 1', 'Em andamento', '30 min', '-', '-', 'progress'),
+    createDataAvaliacao('Aval 2', 'Em andamento', '30 min', '15/07/2021', '5.0', 'progress'),
+    createDataAvaliacao('Aval 3', 'Submetida', '30 min', '02/06/2021', '9.0', 'success'),
+    createDataAvaliacao('Aval 4', 'Não submetida', '30 min', '29/05/2021', '6.8', 'failed'),
+    createDataAvaliacao('Aval 5', 'Revisão', '30 min', '22/05/2021', '4.9', 'warning'),
+    createDataAvaliacao('Aval 6', 'Submetida', '30 min', '29/05/2021', '6.8', 'success'),
+    createDataAvaliacao('Aval 7', 'Não Submetida', '30 min', '05/04/2021', '4.9', 'failed'),
+    createDataAvaliacao('Aval 8', 'Revisão', '30 min', '27/03/2021', '4.0', 'warning'),
+    createDataAvaliacao('Aval 9', 'Submetida', '30 min', '28/01/2021', '9.0', 'success'),
+  ]
+
   return (
       <>
       <Headers />
       <PageBox>
-      <DisplayGrid>
-{OurAvaliation('avaliacao 01', 0)}
-{OurAvaliation('avaliacao 02', 2)}
-{OurAvaliation('avaliacao 03', 3)}
-{OurAvaliation('avaliacao 04', 1)}
-{OurAvaliation('avaliacao 05', 0)}
-{OurAvaliation('avaliacao 06', 1)}
-</DisplayGrid>
-
-
-    </PageBox>
+        <Button color="primary" variant="contained" size="small" onClick={checkIn} style={{marginTop: "20px"}}>Check-In</Button>
+        <DataTable columns={columns} rows={rows}/>
+      </PageBox>
     </>
   );
 }

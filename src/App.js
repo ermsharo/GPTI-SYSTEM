@@ -1,23 +1,48 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
+import { StyledEngineProvider } from '@mui/material/styles';
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { Routes, Route, Link } from "react-router-dom";
+
+/* import * as serviceWorker from "./serviceWorker"; */
 import Login from './Pages/Login';
 import Home from './Pages/Home';
 import ProvaPageNew from './Pages/ProvaPageNew';
 import Prova from './Pages/Prova';
 import CursosAluno from './Pages/CursosAluno';
-import PaginaCurso from './Pages/PaginaCurso';
 import ProvaPageReview from './Pages/ProvaPageReview'; 
+import PaginaCurso from './Pages/PaginaCurso';
 import AvaliacoesPendentes from './Pages/AvaliacoesPendentes';
-import { StyledEngineProvider } from '@mui/material/styles';
-import { BrowserRouter } from "react-router-dom";
-/* import * as serviceWorker from "./serviceWorker"; */
-import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import ProvaReview from './Pages/ProvaReview';
 import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
 import ProvaPageExpirada from './Pages/ProvaPageExpirada';
 import HomeRevisoes from './Pages/HomeRevisões';
+
+export let theme = createTheme({
+  palette: {
+    primary: {
+      main: "#639fff",
+    },
+    secondary: {
+      main: "#ffd18c",
+    },
+    success: {
+      main: "#8AC249"
+    },
+    progress: {
+      main: "#797979"
+    },
+    warning: {
+      main: "#FE9700"
+    },
+    failed: {
+      main: "#f34235"
+    }
+  },
+});
+
+theme = responsiveFontSizes(theme);
 
 function App() {
   return (
@@ -25,9 +50,7 @@ function App() {
 
 <BrowserRouter>
     <StyledEngineProvider injectFirst>
-
-
-
+    <ThemeProvider theme={theme}>
     <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Login />} />
@@ -41,12 +64,10 @@ function App() {
         <Route path="/cursos_aluno" element={<CursosAluno />} />  
         <Route path="/pagina_curso" element={<PaginaCurso />} />  
         <Route path="/revisoes_home" element={<HomeRevisoes />} />  
-        
-           </Routes>
-
-
-  </StyledEngineProvider>
-</BrowserRouter>
+      </Routes>
+    </ThemeProvider>
+      </StyledEngineProvider>
+    </BrowserRouter>
     </>
   );
 } 

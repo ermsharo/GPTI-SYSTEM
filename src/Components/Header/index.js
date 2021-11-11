@@ -87,7 +87,7 @@ export default function Header() {
 
   return (
     <>
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, backgroundColor: 'primary.main'}} >
  
       <AppBar position="static">
       <HeaderBox>
@@ -97,14 +97,14 @@ export default function Header() {
             
             <div>
 
-<IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick ={ChatStatusChange}
-          >
+            <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                        onClick ={ChatStatusChange}
+                      >
                 <Link to="/home"><LogoBox>
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_EACH-USP.svg/2090px-Logo_EACH-USP.svg.png"/>
 </LogoBox> </Link>  

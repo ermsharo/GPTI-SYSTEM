@@ -2,34 +2,9 @@
 import * as React from 'react';
 import styled from 'styled-components'
 import Headers from '../Components/Header';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
-import DescriptionIcon from '@mui/icons-material/Description';
-import { Routes, Route, Link } from "react-router-dom";
 
-const FirstLine = styled.div`
-
-display: grid; 
-grid-template-columns: 1fr 1fr ;
-column-gap: 64px;
-margin-top: 64px;
-row-gap: 64px;
-
-@media(max-width: 1200px){
-  grid-template-columns: 1fr;
-
- }
-
-
-
-`
+import {DataTable, createDataAvaliacao} from "../Components/TableAvaliacao/Table"
 
 const PageBox = styled.div`
  width: 60vw; 
@@ -39,98 +14,50 @@ const PageBox = styled.div`
   width: 90vw; 
  }
 
-
-
- 
-
 `
-
-
-const TableBox = styled.div`
-
-margin-top: 64px;
-`
-
-
-
-
-
-
-
-
-
-
 
 export default function AvaliacoesPendentes() {
+  const columns = [
+    { id: 'nome', label: 'Avaliação', minWidth: 80 , align: 'center'},
+    { id: 'status', label: 'Status', minWidth: 100, align: 'center'},
+    {
+      id: 'duracao',
+      label: 'Duração',
+      minWidth: 80,
+      align: 'center',
+    },
+    {
+      id: 'data_limite',
+      label: 'Data limite para questionamento',
+      minWidth: 80,
+      align: 'center',
+    },
+    {
+      id: 'nota',
+      label: 'Nota',
+      minWidth: 50,
+      align: 'center',
+    },
+  ];
+
+  const rows = [
+    createDataAvaliacao('Aval 1', 'Em andamento', '30 min', '-', '-', 'progress'),
+    createDataAvaliacao('Aval 2', 'Em andamento', '30 min', '15/07/2021', '5.0', 'progress'),
+    createDataAvaliacao('Aval 3', 'Submetida', '30 min', '02/06/2021', '9.0', 'success'),
+    createDataAvaliacao('Aval 4', 'Não submetida', '30 min', '29/05/2021', '6.8', 'failed'),
+    createDataAvaliacao('Aval 5', 'Revisão', '30 min', '22/05/2021', '4.9', 'warning'),
+    createDataAvaliacao('Aval 6', 'Submetida', '30 min', '29/05/2021', '6.8', 'success'),
+    createDataAvaliacao('Aval 7', 'Não Submetida', '30 min', '05/04/2021', '4.9', 'failed'),
+    createDataAvaliacao('Aval 8', 'Revisão', '30 min', '27/03/2021', '4.0', 'warning'),
+    createDataAvaliacao('Aval 9', 'Submetida', '30 min', '28/01/2021', '9.0', 'success'),
+  ]
+
   return (
-<>
+    <>
     <Headers/>
-<PageBox>
-  
-
-<FirstLine>
-
-<Paper elevation={1}  style = {{padding: '32px'}}>      <Typography gutterBottom variant="h4" component="div">
-Nome/codigo do curso
-            </Typography></Paper>
-<Paper elevation={1}   style = {{padding: '32px'}} >      <Typography gutterBottom variant="h4" component="div">
-Descrição /Informações úteis
-            </Typography></Paper>
-
-</FirstLine>
-<TableBox> 
-<Paper elevation={1} style = {{padding: '32px'}}>
-<Table>
-      <Thead >
-        <Tr >
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center">Revisão  </Typography></Th>
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center" >Status  </Typography></Th>
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center" >Duração  </Typography></Th>
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center">Data limite para questionamento  </Typography></Th>
-          <Th> <Typography gutterBottom variant="h5" component="div" align = "center">Nota </Typography></Th>
-        </Tr>
-      </Thead>
-      <Tbody>
-        <Tr style = {{color: '#797979'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to = '/prova_home_new' > <DescriptionIcon/>   Avaliação 1  </Link>   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">em andamento  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 60 min  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  DD/MM/AAAA </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
-        </Tr>
-
-        <Tr style = {{color :'#8AC249'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to = '/prova_home_review'> <DescriptionIcon/>   Avaliação 2  </Link>   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Submetida  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 60 min   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> DD/MM/AAAA </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
-        </Tr>
-
-        <Tr style = {{color :'#f34235'}}>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> <Link to ="/prova_expirada"> <DescriptionIcon/>   Avaliação 3  </Link>   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Não submetida  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> 60 min   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center"> DD/MM/AAAA </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
-        </Tr>
-        <Tr style = {{color :'#FE9700'}}>
-
-       
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  <DescriptionIcon/>   Avaliação 4   </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">Revisando  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">DD/MM/AAAA  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  DD/MM/AAAA  </Typography></Td>
-          <Td><Typography gutterBottom variant="h6" component="div" align = "center">  Nota </Typography></Td>
-       </Tr>
-        
-   
-        
-      </Tbody>
-    </Table>
-  </Paper>
-</TableBox>
-   </PageBox>
+    <PageBox>
+      <DataTable columns={columns} rows={rows}/>
+    </PageBox>
    </>
-  );
+  )
 }
