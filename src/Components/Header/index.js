@@ -46,34 +46,20 @@ const LogoBox = styled.div`
 img{
   width: 40px; 
   height: 40px;
-  
-
 }
 margin:auto; 
-
-
 `
 
 const UserBox = styled.div`
-
 display: flex;
 padding-top: 12px;
-
-
 `
 
 const UserText = styled.div`
 padding-left:10px;
 padding-right: 10px;
 padding-top: 5px;
-
-
-
 `
-
-
-
-
 
 export default function Header() {
 
@@ -83,8 +69,6 @@ export default function Header() {
   
     setChatStatus(!chatStatus); 
   }
-  
-
 
   return (
     <>
@@ -109,9 +93,11 @@ export default function Header() {
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_EACH-USP.svg/2090px-Logo_EACH-USP.svg.png"/>
 </LogoBox> </Link>  
           </IconButton>
+          <Link to="/home_professor" underline="none" style={{textDecoration: "none"}}>
           <Typography gutterBottom variant="h6" component="div" style={{color: theme.palette.secondary.main, fontWeight: "bold"}}>
           Virtual Avalia
           </Typography>
+          </Link>
 
 
 </div>
