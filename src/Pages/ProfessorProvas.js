@@ -45,8 +45,7 @@ export default function ProvasProfessor() {
       <>
       <Headers />
       <PageBox>
-        <DataTable columns={columns} rows={rows} isReview={true}/>
-        <Link to = "/adicionar_provas_professor"> <Button variant="contained" color = "primary" fullWidth >Criar prova  &nbsp; <Icon color="white">add_circle</Icon> </Button> </Link>
+        <DataTable columns={columns} rows={rows} isProfessor/>
       </PageBox>
     </>
   );

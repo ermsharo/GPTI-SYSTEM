@@ -33,18 +33,25 @@ export function DataTable({columns, rows, isReview, isProfessor}) {
     statusData.progress = ["/prova_review", theme.palette.progress.main];
     statusData.success = ["/prova_review_professor", theme.palette.success.main];
     statusData.failed = ["/prova_expirada", theme.palette.failed.main];
+    statusData.warning = ["/prova_review_aluno", theme.palette.warning.main];
+    if(isProfessor) {
+      statusData.warning = ["/prova_review_professor_act", theme.palette.warning.main];
+    }
   } else {
-     statusData.progress = ["/prova_home_new", theme.palette.progress.main];
-     statusData.success = ["/prova_home_review", theme.palette.success.main];
-     statusData.failed = ["/prova_expirada", theme.palette.failed.main];
+    if(isProfessor) {
+      statusData.warning = ["/prova", theme.palette.warning.main];
+      statusData.progress = ["/prova", theme.palette.progress.main];
+      statusData.success = ["/prova", theme.palette.success.main];
+      statusData.failed = ["/prova", theme.palette.failed.main];
+    } else {
+      statusData.progress = ["/prova_home_new", theme.palette.progress.main];
+      statusData.success = ["/prova_home_review", theme.palette.success.main];
+      statusData.failed = ["/prova_expirada", theme.palette.failed.main];
+    }
   }
 
   
-  statusData.warning = ["/prova_review_aluno", theme.palette.warning.main];
   
-  if(isProfessor) {
-    statusData.warning = ["/prova_review_professor_act", theme.palette.warning.main];
-  }
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
