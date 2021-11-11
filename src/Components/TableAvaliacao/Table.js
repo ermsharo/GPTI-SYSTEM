@@ -8,9 +8,8 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import DescriptionIcon from '@mui/icons-material/Description';
-import {
-  useRoutes,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+
 
 import { theme } from '../../App';
 export function createDataAvaliacao(nome, status, duracao, data_limite, nota, type) {
@@ -24,6 +23,8 @@ export function createDataRevisao(nome, status, data_limite, nota, type) {
 
 export function DataTable({columns, rows, isReview}) {
   let statusData = {};
+  const navigate = useNavigate();
+
   if(isReview) {
     statusData.progress = ["/prova_review", theme.palette.progress.main];
     statusData.success = ["/prova_review_professor", theme.palette.success.main];
@@ -34,7 +35,7 @@ export function DataTable({columns, rows, isReview}) {
      statusData.failed = ["/prova_expirada", theme.palette.failed.main];
   }
 
-  statusData.warning = ["", theme.palette.warning.main];
+  statusData.warning = ["/prova_review_aluno", theme.palette.warning.main];
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -71,7 +72,7 @@ export function DataTable({columns, rows, isReview}) {
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code} onClick={() => {
-                    //{statusData[row["type"]][0]}
+                    navigate(statusData[row["type"]][0]);
                   }} >
                     {columns.map((column) => {
                       const value = row[column.id];

@@ -49,7 +49,7 @@ export default function AvaliacoesPendentes() {
     <>
     <Headers/>
     <PageBox>
-      <DataTable columns={columns} rows={rows}/>
+      <DataTable columns={columns} rows={rows} isReview={false}/>
     </PageBox>
    </>
   )

@@ -63,7 +63,7 @@ export default function UseFormControl() {
       <Headers />
       <PageBox>
         <Button color="primary" variant="contained" size="small" onClick={checkIn} style={{marginTop: "20px"}}>Check-In</Button>
-        <DataTable columns={columns} rows={rows}/>
+        <DataTable columns={columns} rows={rows} isReview={false}/>
       </PageBox>
     </>
   );

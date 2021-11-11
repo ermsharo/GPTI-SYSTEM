@@ -9,7 +9,6 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
 import styled from 'styled-components';
-import ChatDrawer from './../ChatDrawer/ChatDrawer';
 import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import {
@@ -20,6 +19,8 @@ import {
   Redirect,
   useLocation
 } from "react-router-dom";
+import {theme} from "../../App";
+
 
 const HeaderBox = styled.div`
 
@@ -95,7 +96,7 @@ export default function Header() {
  
           <HeaderDisplay>
             
-            <div>
+            <div style={{display: 'flex', flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
 
             <IconButton
                         size="large"
@@ -103,40 +104,15 @@ export default function Header() {
                         color="inherit"
                         aria-label="menu"
                         sx={{ mr: 2 }}
-                        onClick ={ChatStatusChange}
                       >
                 <Link to="/home"><LogoBox>
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_EACH-USP.svg/2090px-Logo_EACH-USP.svg.png"/>
 </LogoBox> </Link>  
           </IconButton>
+          <Typography gutterBottom variant="h6" component="div" style={{color: theme.palette.secondary.main, fontWeight: "bold"}}>
+          Virtual Avalia
+          </Typography>
 
-
-
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick ={ChatStatusChange}
-          >
-          <Badge badgeContent={4} color="warning">
-  <ChatBubbleIcon color="action" />
-</Badge>
-          </IconButton>
-
-
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-          <Badge badgeContent={4} color="warning">
-          <NotificationsIcon color="action" />
-</Badge>
-          </IconButton>
 
 </div>
 
@@ -157,7 +133,6 @@ export default function Header() {
       </AppBar>
     </Box>
 
- <ChatDrawer chatStatus = {chatStatus} ChatStatusChange = {ChatStatusChange}/>
 
     </>
   );
