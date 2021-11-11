@@ -13,7 +13,15 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@material-ui/core/Button';
 import Icon from '@mui/material/Icon';
 
-/* import { DataGrid } from '@mui/x-data-grid'; */
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
+
 
 import {
   BrowserRouter as Router,
@@ -47,6 +55,11 @@ const FormBoxBullet = styled.div`
   padding: 16px;
   display: grid;
   grid-template-columns: 50% 50%;
+
+
+  @media(max-width: 1200px){
+    grid-template-columns: 100% ;
+  }
 
 `
 
@@ -98,42 +111,23 @@ const ButtonBoxBullet = styled.div`
   ];
 
 
-  const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'firstName', headerName: 'First name', width: 130 },
-    { field: 'lastName', headerName: 'Last name', width: 130 },
-    {
-      field: 'age',
-      headerName: 'Age',
-      type: 'number',
-      width: 90,
-    },
-    {
-      field: 'fullName',
-      headerName: 'Full name',
-      description: 'This column has a value getter and is not sortable.',
-      sortable: false,
-      width: 160,
-      valueGetter: (params) =>
-        `${params.getValue(params.id, 'firstName') || ''} ${
-          params.getValue(params.id, 'lastName') || ''
-        }`,
-    },
-  ];
+
+
+
+
+
+  function createData(name, calories, fat, carbs) {
+    return { name, calories, fat, carbs };
+  }
   
   const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+    createData('1', "tema 1", "1","Facil"),
+    createData('1', "tema 2", "3","Médio"),
+    createData('1', "tema 3", "5","Dificil"),
+    createData('1', "tema 4", "7","Dificil"),
+  
   ];
-
-
+  
 
 
 
@@ -153,7 +147,7 @@ export default function CadastroTurma() {
       <PageBox> 
       <Typography gutterBottom variant="h4" component="div">
 
-Cadasto de turma
+Cadasto de prova 
      </Typography>
     
     <FormBoxBullet>
@@ -240,31 +234,62 @@ Cadasto de turma
 
    
 
-    <div style={{ height: 400, width: '100%' }}>
-{/*       <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      /> */}
-    </div>
+    <TableContainer component={Paper}>
+      <Table  size="small" aria-label="a dense table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Quantidade</TableCell>
+            <TableCell align="right">Tema</TableCell>
+            <TableCell align="right">Peso</TableCell>
+            <TableCell align="right">Dificuldade</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell align="right">{row.calories}</TableCell>
+              <TableCell align="right">{row.fat}</TableCell>
+              <TableCell align="right">{row.carbs}</TableCell>
+    
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 
 
-
-<Button variant="contained" color = "primary" >Importar alunos  &nbsp; <Icon color="white">upload</Icon> </Button>
-
-
-
-<Button variant="contained" color = "primary" row = {10}>Gerar Link 
-de Ingresso  &nbsp; <Icon color="white">link</Icon> </Button>
 
 
     </ButtonBoxBullet>
 
     </FormBoxBullet>
 
-   <Link to = "/turmas"> <Button variant="contained" color = "primary" fullWidth >Criar turma  &nbsp; <Icon color="white">check</Icon> </Button> </Link>
+
+
+
+    <ButtonBoxBullet>
+
+   
+
+   
+
+
+
+    </ButtonBoxBullet>
+
+
+
+
+   <Link to = "/provas_professor"> <Button variant="contained" color = "primary" fullWidth >Voltar    </Button> </Link>
+  <br/> <br/>
+  <Link to = "/provas_professor"> <Button variant="contained" color = "primary" fullWidth > Confirmar  </Button> </Link>
+    
       </PageBox>
       </div>
     </>
