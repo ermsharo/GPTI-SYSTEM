@@ -43,7 +43,7 @@ export default function ProvasProfessor() {
       <>
       <Headers />
       <PageBox>
-        <DataTable columns={columns} rows={rows} isReview={true}/>
+        <DataTable columns={columns} rows={rows} isProfessor/>
       </PageBox>
     </>
   );
