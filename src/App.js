@@ -18,6 +18,11 @@ import ProvaReview from './Pages/ProvaReview';
 import ProvaReviewProfessor from './Pages/ProvaReviewProfessor';
 import ProvaPageExpirada from './Pages/ProvaPageExpirada';
 import HomeRevisoes from './Pages/HomeRevisões';
+import HomeProfessor from './Pages/HomeProfessor';
+import TurmasProfessor from './Pages/TurmasProfessor';
+import CadastroTurma from './Pages/CadastroTurma';
+import PerguntasProfessor from './Pages/ProfessorPerguntas';
+import CadastroPerguntaProfessor from './Pages/ProfessorCadastraPergunta'; 
 
 export let theme = createTheme({
   palette: {
@@ -47,28 +52,32 @@ theme = responsiveFontSizes(theme);
 function App() {
   return (
     <>
-
-<BrowserRouter>
-    <StyledEngineProvider injectFirst>
-    <ThemeProvider theme={theme}>
-    <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Login />} />
-        <Route path="/prova_home_new" element={<ProvaPageNew />} />
-        <Route path="/prova_home_review" element={<ProvaPageReview/>} />
-        <Route path="/prova" element={<Prova />} />   
-        <Route path="/prova_review" element={<ProvaReview />} />  
-        <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} /> 
-        <Route path="/prova_expirada" element={<ProvaPageExpirada />} />   
-        <Route path="/avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  
-        <Route path="/cursos_aluno" element={<CursosAluno />} />  
-        <Route path="/pagina_curso" element={<PaginaCurso />} />  
-        <Route path="/revisoes_home" element={<HomeRevisoes />} />  
-      </Routes>
-    </ThemeProvider>
-      </StyledEngineProvider>
-    </BrowserRouter>
-    </>
+    <BrowserRouter>
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Login />} />
+              <Route path="/prova_home_new" element={<ProvaPageNew />} />
+              <Route path="/prova_home_review" element={<ProvaPageReview/>} />
+              <Route path="/prova" element={<Prova />} />   
+              <Route path="/prova_review" element={<ProvaReview />} />  
+              <Route path="/prova_review_professor" element={<ProvaReviewProfessor />} /> 
+              <Route path="/prova_expirada" element={<ProvaPageExpirada />} />   
+              <Route path="/avaliacoes_pendentes" element={<AvaliacoesPendentes />} />  
+              <Route path="/cursos_aluno" element={<CursosAluno />} />  
+              <Route path="/pagina_curso" element={<PaginaCurso />} />  
+              <Route path="/revisoes_home" element={<HomeRevisoes />} />  
+              <Route path="/home_professor" element={<HomeProfessor />} />  
+              <Route path="/turmas" element={<TurmasProfessor />} />  
+              <Route path="/adicionar_turma" element={<CadastroTurma />} /> 
+              <Route path="/perguntas" element={<PerguntasProfessor />} />  
+              <Route path="/adicionar_pergunta" element={<CadastroPerguntaProfessor />} /> 
+            </Routes>
+          </ThemeProvider>
+        </StyledEngineProvider>
+      </BrowserRouter>
+</>
   );
 } 
 
