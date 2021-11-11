@@ -93,12 +93,12 @@ export default function ProvaPageExpirada() {
 
       <div  style = {{cursor:'none',
 opacity: 0.5}}>
-    {OurCardButton('Nome da prova','https://sbradioterapia.com.br/wp-content/uploads/2017/11/prova-alternativa.jpg')}
+    {OurCardButton('Fazer Prova','https://sbradioterapia.com.br/wp-content/uploads/2017/11/prova-alternativa.jpg')}
     </div>
     <div style = {{cursor:'none',
 opacity: 0.5}}>
 
-    {OurCardButton('Solicitar revisão','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg')}
+    {OurCardButton('Verificar Respostas','https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg')}
     </div>
 
 

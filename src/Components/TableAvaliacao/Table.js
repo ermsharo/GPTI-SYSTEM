@@ -22,13 +22,19 @@ export function createDataRevisao(nome, status, data_limite, nota, type) {
 }
 
 
-export function DataTable({columns, rows}) {
-  const statusData = {
-    progress: ["/prova_home_new",theme.palette.progress.main],
-    success: ["/prova_home_review", theme.palette.success.main],
-    warning: ["/", theme.palette.warning.main],
-    failed: ["/prova_expirada", theme.palette.failed.main],
+export function DataTable({columns, rows, isReview}) {
+  let statusData = {};
+  if(isReview) {
+    statusData.progress = ["/prova_review", theme.palette.progress.main];
+    statusData.success = ["/prova_review_professor", theme.palette.success.main];
+    statusData.failed = ["/prova_expirada", theme.palette.failed.main];
+  } else {
+     statusData.progress = ["/prova_home_new", theme.palette.progress.main];
+     statusData.success = ["/prova_home_review", theme.palette.success.main];
+     statusData.failed = ["/prova_expirada", theme.palette.failed.main];
   }
+
+  statusData.warning = ["", theme.palette.warning.main];
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -66,11 +72,11 @@ export function DataTable({columns, rows}) {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code} onClick={() => {
                     //{statusData[row["type"]][0]}
-                  }}>
+                  }} >
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (
-                          <TableCell key={column.id} align={column.align} sx={{color: column.id === "status" ? statusData[row["type"]][1] : "initial"}} >
+                          <TableCell key={column.id} align={column.align} sx={{color: statusData[row["type"]][1]}} >
                             {column.id === "nome" && <DescriptionIcon/>}
                             {column.format && typeof value === 'number'
                               ? column.format(value)

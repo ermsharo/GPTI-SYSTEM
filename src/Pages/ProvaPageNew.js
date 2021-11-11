@@ -92,11 +92,11 @@ export default function UseFormControl() {
       <Grid>
 
       <div>
-    {OurCardButton('Nome da prova','https://sbradioterapia.com.br/wp-content/uploads/2017/11/prova-alternativa.jpg', "/prova")}
+    {OurCardButton('Fazer Prova','https://sbradioterapia.com.br/wp-content/uploads/2017/11/prova-alternativa.jpg', "/prova")}
     </div>
     <div  style = {{cursor:'none',
 opacity: 0.5}}>
-    {OurCardButton('Solicitar revisão','https://https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg-tbn0.gstatic.com/images?q=tbn:ANd9GcSEsQ38soW48W3z1RecoCAQgvLHOtmhX9w4PgQMHSee1aGaesoeVvIItftA8fYhSPzua_A&usqp=CAU')}
+    {OurCardButton('Verificar Respostas','https://https://portalexamedeordem.com.br/wp-content/uploads/2019/08/corre%C3%A7%C3%A3o-632x474.jpg-tbn0.gstatic.com/images?q=tbn:ANd9GcSEsQ38soW48W3z1RecoCAQgvLHOtmhX9w4PgQMHSee1aGaesoeVvIItftA8fYhSPzua_A&usqp=CAU')}
     </div>
 
 

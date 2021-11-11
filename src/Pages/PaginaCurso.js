@@ -5,13 +5,12 @@ import Button from '@mui/material/Button';
 import {DataTable, createDataAvaliacao} from "../Components/TableAvaliacao/Table"
 
 const PageBox = styled.div`
-  width: 100vw;
-  margin: auto;
-  
-  @media (min-width: 750px){
-    width: 60vw;
-    margin: 0;
-  }
+ width: 60vw; 
+ margin: auto;
+
+ @media(max-width: 1200px){
+  width: 90vw; 
+ }
 `
 
 export default function UseFormControl() {
